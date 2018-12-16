@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title> Login / Register </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="keywords" content=" Login / Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,
+Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" /> -->
+<script type="application/x-javascript"> addEventListener("load", function() {
+ setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body>
+<h1> Login / Register Form</h1>
+<div class="main-agileits">
+<!--form-stars-here-->
+
+		<div class="form-w3-agile">
+			<h2> login form</h2>
+			<form action="#" method="post" name="loginForm" onsubmit="return loginvalidation()">  
+				<div class="form-sub-w3">
+					<input type="text" name="email" placeholder=" Email " required="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="enter email" />
+				<div class="icon-w3">
+					<i class="fa fa-user" aria-hidden="true"></i>
+				</div>
+				</div>
+
+				<div class="form-sub-w3">
+					<input type="password" name="Password" placeholder="Password" required="" 
+					pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}" title="one lower case, one Upper case and digits   " />
+				<div class="icon-w3">
+					<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+				</div>
+				</div>
+				<p class="p-bottom-w3ls">Are you new to Site?<a class="w3_play_icon1" href="#small-dialog1">  Register here</a></p>
+				
+				<div class="submit-w3l">
+					<input type="submit" value="Login">
+				</div>
+			</form>
+		</div>
+<!--//form-ends-here-->
+
+
+</div>
+<div id="small-dialog1" class="mfp-hide">
+					<div class="contact-form1">
+										<div class="contact-w3-agileits">
+										<h3>Register Form</h3>
+											<form name="RegisterForm" action="#" method="post" onsubmit=" return RCvalidation()">
+												<div class="form-sub-w3ls">
+													<input name="Rname" placeholder="User Name"  type="text" required=""
+													pattern="{8,20}" title="8 to 20 digits">
+													<div class="icon-agile">
+														<i class="fa fa-user" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="form-sub-w3ls">
+													<input name="Remail" placeholder="Email" class="mail" type="email" required=""
+													pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" >
+													<div class="icon-agile">
+														<i class="fa fa-envelope-o" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="form-sub-w3ls">
+													<input name="Rpassword" placeholder="Password"  type="password" required="" 
+													pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}"
+													title=" lower case, Upper case and digits ">
+													<div class="icon-agile">
+														<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+													</div>
+												</div>
+												<div class="form-sub-w3ls">
+													<input name="RCpassword" placeholder="Confirm Password"  type="password" required=""
+													 pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,20}"
+													 title=" lower case,  Upper case and digits ">
+													<div class="icon-agile">
+														<i class="fa fa-unlock-alt" aria-hidden="true"></i>
+													</div>
+												</div>
+											</div>
+											<div class="login-check">
+								 			 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><p>I Accept Terms & Conditions</p></label>
+											</div>
+										<div class="submit-w3l">
+											<input type="submit" value="Register">
+										</div>
+										</form>
+					</div>	
+				</div>
+
+<!-- copyright -->
+	<div class="copyright w3-agile">
+		<p> © 2018  Login / Register Form . All rights reserved | Design by <a href="https://www.facebook.com/Mohsin.Iqbal.cu" target="_blank">Mohsin</a></p>
+	</div>
+	<!-- //copyright --> 
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<!-- pop-up-box -->  
+		<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<!--//pop-up-box -->
+
+
+	<script>
+		$(document).ready(function() {
+		$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+																		
+		});
+		/*RCpassword = register confirm password
+		 Rpassword = register  password
+		 Rname = Register name
+		 Remail = register email
+		 */
+
+		function RCvalidation(){
+			var RegisterName = document.forms["RegisterForm"]["Rname"].value;			 
+			var Remail = document.forms["RegisterForm"]["Remail"].value;			 
+			var Rpassword = document.forms["RegisterForm"]["Rpassword"].value;			 
+			var RCpassword = document.forms["RegisterForm"]["RCpassword"].value;	
+			
+
+					if(confirmpassword(Rpassword, RCpassword)){
+
+					}else{alert("registration failed");}
+		}
+
+
+		function loginvalidation(){
+						var Loginpassword = document.forms["loginForm"]["password"].value;			 
+
+if ((validatePassword(Loginpassword))) {
+	alert("login successfull");
+			return true;
+}else{
+	alert("login failed");
+	return false;
+}
+						
+
+
+		}
+
+		
+		
+
+			function validatePassword(Rpassword1)
+			{
+
+				 var ppt = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,})/;
+
+					if (!(ppt.test(Rpassword1))) {
+							alert("please include Capital letter,small letter and digits ");
+							return false;
+					     }else{
+alert("login sucessfull")
+					     	return true;}
+					
+			}
+
+			function confirmpassword(Rpassword1,RCpassword1)
+			{
+				var ppt = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.{6,20})/;
+
+					if (!(ppt.test(Rpassword1))) {
+							alert("please include one Capital letter, small letter and digits  ");
+							
+					     }
+					    
+					// confirm password validation
+					    if(!(ppt.test(RCpassword1) && Rpassword1 == RCpassword1)) {
+					    	    	alert("confirm password not same");
+					    	    	return false;
+					           }else{return true;}
+			}
+
+
+
+
+	</script>
+</body>
+</html>
